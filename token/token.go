@@ -18,7 +18,7 @@ const (
 
 	// 演算子
 	ASSIGN = "="
-	PLUST  = "+"
+	PLUS   = "+"
 
 	// デリミタ
 	COMMA     = ","
