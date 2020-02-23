@@ -97,6 +97,10 @@ func (l *Lexer) NextToken() token.Token {
 	case 0:
 		tok.Literal = ""
 		tok.Type = token.EOF
+	case '[':
+		tok = newToken(token.LBRACKET, l.ch)
+	case ']':
+		tok = newToken(token.RBRACKET, l.ch)
 	default:
 		// TODO このif文、switchの前に持っていけばもっと美しく書ける？
 		if isLetter(l.ch) {
